@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">Inscripciones a algo</h1>
+    </div>
+
+    <!-- Formulario -->
+    <div class="card">
+        <div>
+            <label for="nombrePersona">Nombre de la persona:</label>
+            <input type="text" id="nombrePersona" placeholder="Tu nombre aquí">
+        </div>
+        <div>
+            <label for="actividadSecelccionada">Actividad:</label>
+            <select name="" id="actividadSeleccionada">
+                <option value="">Selecciona una actividad</option>
+                <option value="Robotica">Robótica</option>
+                <option value="Ofimatica">Ofimática</option>
+                <option value="DiseñoWeb">Diseño Web</option>
+                <option value="Videojuegos">Videojuegos</option>
+            </select>
+        </div>
+        <div>
+            <label>Turno</label>
+            <div>
+                <input type="radio" name="turnoActividad" id="turnoMañana" value="Mañana">
+                <label for="turnoMañana">Mañana</label>
+            </div>
+            <div>
+                <input type="radio" name="turnoActividad" id="turnoTarde" value="Tarde">
+                <label for="turnoTarde">Tarde</label>
+            </div>
+        </div>
+        <div>
+            <button id="botonGuardar" class="btn btn-info">Añadir inscripción</button>
+        </div>
+    </div>
+
+    <!-- Tabla -->
+    <div class="table-responsive container mt-4">
+        <table class="table table-striped table-bordered align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>Persona</th>
+                    <th>Actividad</th>
+                    <th>Turno</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTablaInscripciones">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
